@@ -6,7 +6,20 @@
 > Below you will find a list of common problems and their solutions
 
 ## USB does not work
-Enable USB host mode using the optional [post install guide](materials.md#toggling-usb-host-mode).
+After you boot into the system, you will be taken to OOBE or the desktop (depending on the image) and find that the USB does not work. In order to fix this you must:
+
+Boot into custom recovery and run them mass storage script according to the instructions
+
+After that, in the command line of your PC, enter:
+ ```
+# X: Is what we assigned in the diskpart part, replace the letter if you used another letter.
+ reg load HKLM\OFFLINE R:\Windows\System32\Config\System 
+ regedit
+```
+In HKEY_LOCAL_MACHINE/OFFLINE/ControlSet001/Control/USB/OsDefaultRoleSwitchMode change value to 1
+After, in the command line of your PC, enter
+```reg unload HKLM\OFFLINE```
+Done!
 
 ##### Finished!
 
