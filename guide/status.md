@@ -20,7 +20,7 @@ Almost nothing works.
 - [ ] Touchscreen 
 - [x] UFS ```Samsung revision unstable```
 
-- [x] USB
+- [x] USB ```Need additional power```
 - [X] RAM ```Not stable (memory leak)```
 - [ ] Wi-Fi
 
